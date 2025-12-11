@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PUHON – Contacts & Hotlines</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* Body & background */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('sad.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.25);
+    z-index: -1;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 80px;
+    background: #EDE3C7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* logo left, nav right */
+    padding: 0 20px; /* spacing from edges */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* Logo */
+.logo-img {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0px 0px 4px rgba(0,0,0,0.3));
+    flex-shrink: 0; /* prevent logo from shrinking */
+}
+
+/* Navigation wrapper */
+nav {
+    display: flex;
+    gap: 20px;
+    flex-shrink: 0; /* prevent nav from shrinking too much */
+    padding-right: 20px; /* make sure last tab isn’t cut off */
+}
+nav a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #444;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: 0.2s ease;
+    white-space: nowrap;
+}
+
+/* Hover effect */
+nav a:hover {
+    background: #F4D77C;
+    color: black;
+}
+
+/* Layout wrapper */
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    padding-top: 120px; /* space for fixed header */
+}
+
+/* Section boxes */
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255,244,230,0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+section h2 {
+    font-size: 2em;
+    color: #ff7e5f;
+    margin-bottom: 15px;
+}
+section p, section ul {
+    font-size: 1em;
+    line-height: 1.6em;
+    margin-bottom: 20px;
+}
+section ul { margin-left: 20px; }
+
+/* Footer */
+footer {
+    flex-shrink: 0;
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(255,126,95,0.9);
+    color: white;
+}
+
+/* Responsive */
+@media(max-width: 900px){
+    nav {
+        gap: 15px;
+        padding-right: 15px;
+    }
+}
+@media(max-width: 600px){
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    nav {
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+        padding-right: 0;
+        flex-wrap: wrap;
+        margin-top: 8px;
+    }
+    .logo-img { height: 45px; margin-bottom: 8px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <img src="PUHON.png" alt="PUHON Logo" class="logo-img">
+
+    <nav>
+        <a href="index (1).html">Home</a>
+        <a href="about (1).html">About</a>
+        <a href="#">Services</a>
+        <a href="news (1).html">News</a>
+        <a href="Contacts (1).html">Contact</a>
+    </nav>
+</header>
+
+<div class="wrapper">
+
+    <main>
+
+        <section id="contacts">
+            <h2>Contacts & Hotlines</h2>
+
+            <p>Here are key hotlines and resources you can reach for support, donations, or volunteering:</p>
+
+            <ul>
+                <li>Gawad Kalinga: <a href="https://gk1world.com/" target="_blank">gk1world.com</a></li>
+                <li>Rise Against Hunger PH: <a href="https://www.riseagainsthunger.org/" target="_blank">riseagainsthunger.org</a></li>
+                <li>Barangay Hall / Community Pantry – Local Assistance</li>
+                <li>DILG Hotline: <strong>8888</strong></li>
+                <li>DSWD Emergency Hotline: <strong>02-1234-5678</strong></li>
+                <li>Volunteer Email: <a href="mailto:volunteer@puhon.org">volunteer@puhon.org</a></li>
+                <li>Donations Email: <a href="mailto:donate@puhon.org">donate@puhon.org</a></li>
+            </ul>
+
+            <p>If you or someone in your community needs urgent assistance, do not hesitate to contact these numbers.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>PUHON — Building hope, one community at a time.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
